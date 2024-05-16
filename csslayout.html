@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fdd;
+}
+
+.header, .footer {
+    background-color: #9ad;
+    text-align: center;
+    padding: 10px;
+    flex: 0 0 50px;
+    border: 10px solid pink;
+    height: 10%;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    height: 80%;
+}
+
+.aside {
+    background-color: #68a;
+    flex: 0 0 25%;
+    padding: 20px;
+    border: 10px solid pink;
+}
+
+.article {
+    background-color: #f88;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid pink;
+}
+.art{
+    margin: 0px auto;
+    margin-top: 300px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+.image {
+    display: flex;
+    background-color: #ccc;
+    /* flex: 0 0 30%; */
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <div class="main-content">
+            <aside class="aside">Aside</aside>
+            <section class="article">
+                <div class="art">Article</div>
+                <div class="images">
+                    <div class="image">Image</div>
+                    <div class="image">Image</div>
+                    <div class="image">Image</div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
